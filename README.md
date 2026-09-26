@@ -68,3 +68,16 @@ python3 -m http.server 8000
 
 Pushing to `main` deploys via GitHub Actions. In the repository settings, set
 **Pages → Build and deployment → Source** to **GitHub Actions**.
+
+### Custom domain: meetclaudio.com
+
+The domain is set in **Settings → Pages → Custom domain** (a `CNAME` file is not
+used when publishing with GitHub Actions). DNS records at the registrar:
+
+| Type  | Name | Value                   |
+| ----- | ---- | ----------------------- |
+| A     | @    | 185.199.108.153         |
+| A     | @    | 185.199.109.153         |
+| A     | @    | 185.199.110.153         |
+| A     | @    | 185.199.111.153         |
+| CNAME | www  | lassouedhassen.github.io |
