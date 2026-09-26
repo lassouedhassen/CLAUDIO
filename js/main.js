@@ -1,6 +1,16 @@
-/* Claudio — official website interactions */
+/* CLAUDIO — official website interactions */
 (function () {
   'use strict';
+
+  /* Site settings — fill in the real channel URLs when they exist.
+     Links left empty show "Coming soon" instead of going nowhere. */
+  var SOCIAL = {
+    youtube: '',
+    instagram: '',
+    tiktok: '',
+    facebook: ''
+  };
+  var CONTACT_EMAIL = 'hello@claudio.example';
 
   var root = document.documentElement;
   root.classList.add('js');
@@ -18,6 +28,20 @@
   /* Footer year ---------------------------------------------------------- */
   var year = $('#year');
   if (year) year.textContent = new Date().getFullYear();
+
+  /* Social links ------------------------------------------------------- */
+  $$('[data-platform]').forEach(function (a) {
+    var url = SOCIAL[a.getAttribute('data-platform')];
+    if (url) {
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+    } else {
+      a.removeAttribute('href');
+      a.setAttribute('aria-disabled', 'true');
+      a.title = 'Coming soon';
+    }
+  });
 
   /* Header shadow on scroll --------------------------------------------- */
   var header = $('.site-header');
@@ -84,46 +108,6 @@
     reveals.forEach(function (el) { el.classList.add('visible'); });
   }
 
-  /* Animated counters ---------------------------------------------------- */
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function animateCount(el) {
-    var target = parseInt(el.getAttribute('data-count'), 10);
-    if (reduceMotion) { el.textContent = target.toLocaleString(); return; }
-    var start = null, duration = 1400;
-    function tick(ts) {
-      if (!start) start = ts;
-      var p = Math.min((ts - start) / duration, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased).toLocaleString();
-      if (p < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-  var counters = $$('[data-count]');
-  if ('IntersectionObserver' in window) {
-    var countObserver = new IntersectionObserver(function (entries, obs) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) { animateCount(entry.target); obs.unobserve(entry.target); }
-      });
-    });
-    counters.forEach(function (c) { countObserver.observe(c); });
-  } else {
-    counters.forEach(animateCount);
-  }
-
-  /* Pricing billing toggle ---------------------------------------------- */
-  var billingButtons = $$('[data-billing]');
-  billingButtons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var period = btn.getAttribute('data-billing');
-      billingButtons.forEach(function (b) { b.classList.toggle('active', b === btn); });
-      $$('.price .amount').forEach(function (el) {
-        var value = parseFloat(el.getAttribute('data-' + period));
-        el.textContent = '$' + (value % 1 ? value.toFixed(2) : value);
-      });
-    });
-  });
-
   /* Contact form validation --------------------------------------------- */
   var form = $('#contact-form');
   var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -161,7 +145,7 @@
       var data = new FormData(form);
       var subject = encodeURIComponent('Message from ' + data.get('name'));
       var body = encodeURIComponent(data.get('message') + '\n\n— ' + data.get('name') + ' <' + data.get('email') + '>');
-      window.location.href = 'mailto:hello@claudio.example?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + subject + '&body=' + body;
       status.textContent = 'Thanks! Your email app should open to send the message.';
       form.reset();
     });
@@ -178,7 +162,7 @@
         status.textContent = 'Please enter a valid email address.';
         return;
       }
-      status.textContent = "You're on the list — welcome to Claudio!";
+      status.textContent = "Thanks! We'll let you know when Claudio and Max are back on the road.";
       nl.reset();
     });
   }
