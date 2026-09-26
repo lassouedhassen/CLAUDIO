@@ -1,4 +1,4 @@
-# CLAUDIO — Official Website
+# Claudio — Official Website
 
 **Different People. One Story. A Kinder World.**
 
@@ -11,28 +11,40 @@ A fast, dependency-free static site (HTML + CSS + JavaScript, no build step).
 
 ## Sections
 
-- **Hero:** series title, tagline and an animated hand-drawn Claudio & Max
-- **Core philosophy** quote
-- **Meet Claudio** / **Meet Max:** the characters
-- **The journey:** places, cultures and what people share
-- **Themes:** love, friendship, family, kindness, peace, happiness, tolerance, nature, human behavior
-- **Episodes:** the three-beat episode format (coming-soon state)
-- **Visual style:** art direction and color palette
-- **Follow:** YouTube, Instagram, TikTok, Facebook and newsletter
-- **Contact:** collaborations, press and licensing
+- **Hero:** the Claudio wordmark, tagline and the official Claudio & Max artwork
+- **Core philosophy:** “Claudio doesn’t teach the world. The world teaches Claudio.”
+- **Meet Claudio:** personality, character profile, poses and expressions sheets
+- **Meet Max:** the silent companion
+- **The journey:** sample scenes from the visual-style board
+- **Episode 1: A Small Act, A Big Impact:** synopsis, storyboard frames, full storyboard
+- **Episodes:** the five-beat structure, the eight planned episodes, format & distribution
+- **Themes**, **Visual style** (palette), closing quote, **Follow**, **Contact**
 
 Also: light/dark theme, mobile menu, scroll animations (disabled for reduced-motion users),
-accessible forms and a custom 404 page.
+accessible forms, social share image and a custom 404 page.
+
+## Artwork
+
+All images in `assets/` are cropped from the hand-drawn identity board and the Episode 1
+storyboard in the *CLAUDIO COMICS PROJECT* asset package:
+
+| File | Source |
+| --- | --- |
+| `wordmark.png`, `wordmark-light.png`, `icon.png`, `favicon.png` | Claudio – A Brighter Tomorrow board |
+| `img/claudio-hero.webp`, `img/claudio-poses.webp`, `img/claudio-expressions.webp`, `img/scene-*.webp` | Claudio – A Brighter Tomorrow board |
+| `img/max-the-look.webp`, `img/ep1-*.webp`, `img/episode1-storyboard.webp` | Episode 1 storyboard |
+
+Replace any of them with final production art using the same file names.
 
 ## Project structure
 
 ```
 .
-├── index.html          # Main page (character art is inline SVG in <defs>)
+├── index.html          # Main page
 ├── 404.html            # Not-found page
 ├── css/styles.css      # Styles; series palette & theme tokens at the top
 ├── js/main.js          # Settings (social links, email) + interactions
-├── assets/             # Logo and favicon
+├── assets/             # Wordmark, icons, share image, artwork (img/)
 └── .github/workflows/pages.yml   # GitHub Pages deployment
 ```
 
@@ -45,12 +57,10 @@ python3 -m http.server 8000
 
 ## Customize
 
-- **Social channels & email:** set `SOCIAL` and `CONTACT_EMAIL` at the top of `js/main.js`,
-  and the email link in the Contact section of `index.html`. Empty social links show "Coming soon".
-- **Colors:** the series palette (`--ink`, `--terracotta`, `--sun`, `--sage`, `--denim`, `--skin`)
+- **Social channels & email:** set `SOCIAL` and `CONTACT_EMAIL` at the top of `js/main.js`.
+  Empty social links show "Coming soon".
+- **Colors:** the series palette (`--ink`, `--red`, `--sunset`, `--denim`, `--leaf`, `--brush`, `--paper`)
   lives in `:root` in `css/styles.css`.
-- **Character art:** the `#claudio` and `#max` SVG symbols in `index.html` are placeholder
-  drawings. Swap them for the official artwork (SVG or PNG) when it's ready.
 - **Forms:** the contact form opens the visitor's email app and the newsletter form only shows
   a confirmation. Connect them to a form service (e.g. Formspree) or your own API to collect submissions.
 

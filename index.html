@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CLAUDIO — Different People. One Story. A Kinder World.</title>
-  <meta name="description" content="CLAUDIO is a hand-drawn animated comic series about life, humanity, relationships, society and nature. Claudio doesn't teach the world. The world teaches Claudio.">
-  <meta name="theme-color" content="#fbf6ec">
-  <meta property="og:title" content="CLAUDIO — Different People. One Story. A Kinder World.">
-  <meta property="og:description" content="A hand-drawn animated comic series. Claudio doesn't teach the world. The world teaches Claudio.">
+  <title>Claudio — Different People. One Story. A Kinder World.</title>
+  <meta name="description" content="Claudio is a hand-drawn animated series of short stories about life, humanity, relationships, society and nature. Claudio doesn't teach the world. The world teaches Claudio.">
+  <meta name="theme-color" content="#f5f2ee">
+  <meta property="og:title" content="Claudio — Different People. One Story. A Kinder World.">
+  <meta property="og:description" content="A short animated series about real life, big values and a brighter tomorrow.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script>
     // Apply saved theme before paint to avoid a flash.
@@ -23,73 +26,13 @@
   </script>
 </head>
 <body>
-  <!-- Reusable hand-drawn character art -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <defs>
-      <filter id="wobble">
-        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4"/>
-        <feDisplacementMap in="SourceGraphic" scale="2.4"/>
-      </filter>
-
-      <symbol id="claudio" viewBox="0 0 220 330">
-        <g stroke="var(--line)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-          <!-- backpack -->
-          <rect x="62" y="158" width="96" height="74" rx="14" fill="var(--sage)"/>
-          <!-- neck -->
-          <path d="M103 134v16M117 134v16" fill="none"/>
-          <!-- t-shirt -->
-          <path d="M78 150Q110 141 142 150L168 180L152 193L144 182V240H76V182L68 193L52 180Z" fill="var(--terracotta)"/>
-          <!-- backpack straps -->
-          <path d="M89 151L93 238M131 151L127 238" fill="none" stroke-width="5"/>
-          <!-- arms -->
-          <path d="M60 188L54 232" fill="none"/>
-          <circle cx="53" cy="240" r="8" fill="var(--skin)"/>
-          <path class="wave-arm" d="M160 186L182 154" fill="none"/>
-          <circle class="wave-arm" cx="186" cy="146" r="8" fill="var(--skin)"/>
-          <!-- jeans -->
-          <path d="M77 240H143L141 300H117L110 262L103 300H79Z" fill="var(--denim)"/>
-          <!-- sneakers -->
-          <rect x="70" y="298" width="38" height="15" rx="7.5" fill="#fff"/>
-          <rect x="112" y="298" width="40" height="15" rx="7.5" fill="#fff"/>
-          <path d="M72 309h34M114 309h36" fill="none" stroke-width="2.5"/>
-          <!-- head -->
-          <ellipse cx="110" cy="94" rx="40" ry="44" fill="var(--skin)"/>
-          <path d="M71 94q-8 0-7 10t9 8M149 94q8 0 7 10t-9 8" fill="var(--skin)"/>
-          <!-- spiky hair -->
-          <path d="M72 82L64 50L84 64L84 28L100 56L110 18L120 54L136 26L136 58L156 46L148 82Q128 60 110 62Q90 60 72 82Z" fill="var(--ink)"/>
-          <!-- face -->
-          <path d="M87 85q8-6 16-1M117 84q8-5 16 1" fill="none" stroke-width="3"/>
-          <ellipse cx="96" cy="98" rx="3.6" ry="5.2" fill="var(--ink)" stroke="none"/>
-          <ellipse cx="124" cy="98" rx="3.6" ry="5.2" fill="var(--ink)" stroke="none"/>
-          <path d="M110 101q-5 9 1 12" fill="none" stroke-width="2.5"/>
-          <path d="M95 120q15 13 30 0" fill="none"/>
-        </g>
-      </symbol>
-
-      <symbol id="max" viewBox="0 0 140 110">
-        <g stroke="var(--line)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-          <path class="max-tail" d="M106 60q18-12 14-30" fill="none"/>
-          <path d="M50 82v18M62 85v15M88 85v15M100 82v18" fill="none"/>
-          <ellipse cx="74" cy="66" rx="38" ry="22" fill="#fff"/>
-          <ellipse cx="88" cy="58" rx="10" ry="7" fill="var(--ink)" stroke="none"/>
-          <circle cx="36" cy="46" r="21" fill="#fff"/>
-          <path d="M44 64q6 4 14 2" fill="none" stroke="var(--terracotta)" stroke-width="5"/>
-          <path d="M40 27q14 2 14 26q-10-2-14-12z" fill="var(--ink)"/>
-          <circle cx="30" cy="43" r="3.2" fill="var(--ink)" stroke="none"/>
-          <circle cx="16" cy="50" r="4" fill="var(--ink)" stroke="none"/>
-          <path d="M20 57q6 5 12 1" fill="none" stroke-width="2.5"/>
-        </g>
-      </symbol>
-    </defs>
-  </svg>
-
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" id="top">
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="CLAUDIO home">
-        <img src="assets/logo.svg" alt="" width="38" height="38">
-        <span>CLAUDIO</span>
+      <a class="brand" href="#top" aria-label="Claudio home">
+        <img class="wordmark wordmark-ink" src="assets/wordmark.png" alt="Claudio" width="252" height="162">
+        <img class="wordmark wordmark-light" src="assets/wordmark-light.png" alt="" width="252" height="162">
       </a>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
@@ -99,14 +42,14 @@
       <nav id="nav-menu" class="nav-menu" aria-label="Primary">
         <a href="#claudio">Claudio</a>
         <a href="#max">Max</a>
-        <a href="#themes">Themes</a>
+        <a href="#episode-1">Episode 1</a>
         <a href="#episodes">Episodes</a>
         <a href="#style">Style</a>
         <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
           <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
           <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
         </button>
-        <a class="btn btn-primary btn-sm" href="#follow">Follow the journey</a>
+        <a class="btn btn-primary btn-sm" href="#follow">Follow Claudio</a>
       </nav>
     </div>
   </header>
@@ -116,25 +59,27 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <span class="eyebrow">An animated comic series</span>
-          <h1 class="title">CLAUDIO</h1>
-          <p class="tagline">Different People. One Story. <span class="marker">A Kinder World.</span></p>
+          <span class="label">A short animated series</span>
+          <h1 class="sr-only">Claudio</h1>
+          <img class="hero-wordmark wordmark-ink" src="assets/wordmark.png" alt="" width="252" height="162">
+          <img class="hero-wordmark wordmark-light" src="assets/wordmark-light.png" alt="" width="252" height="162">
+          <p class="tagline">Different People. One Story. <span class="underline">A Kinder World.</span></p>
           <p class="lead">
-            Short, hand-drawn animated stories about life, humanity, relationships,
-            society and nature — and the lessons we pass on to the generations after us.
+            Short, hand-drawn stories about real life, big values and a brighter tomorrow.
+            Claudio travels the world with his dog Max, meeting people of every culture,
+            faith and generation, and discovering that we all share the same hopes,
+            dreams and humanity.
           </p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="#episodes">Watch the stories</a>
+            <a class="btn btn-primary" href="#episode-1">Discover Episode 1</a>
             <a class="btn btn-ghost" href="#claudio">Meet Claudio →</a>
           </div>
         </div>
 
-        <div class="hero-art reveal" aria-hidden="true">
-          <div class="sun"></div>
-          <svg class="art-claudio" viewBox="0 0 220 330"><use href="#claudio" filter="url(#wobble)"/></svg>
-          <svg class="art-max" viewBox="0 0 140 110"><use href="#max" filter="url(#wobble)"/></svg>
-          <svg class="ground" viewBox="0 0 400 20" preserveAspectRatio="none"><path d="M4 12C80 6 150 16 220 10S340 8 396 12" filter="url(#wobble)"/></svg>
-        </div>
+        <figure class="hero-art reveal">
+          <img src="assets/img/claudio-hero.webp" width="305" height="573"
+               alt="Claudio, a lanky hand-drawn young man with spiky black hair, a globe T-shirt, jeans, red sneakers and a backpack, smiling next to his small white dog Max. Handwritten note: A curious mind. A kind heart. A global citizen.">
+        </figure>
       </div>
     </section>
 
@@ -151,31 +96,52 @@
 
     <!-- Meet Claudio -->
     <section class="section" id="claudio">
-      <div class="container split">
-        <div class="panel panel-art reveal" aria-hidden="true">
-          <svg viewBox="0 0 220 330"><use href="#claudio" filter="url(#wobble)"/></svg>
-          <span class="speech">Hmm… why do people do that?</span>
+      <div class="container">
+        <div class="split">
+          <div class="reveal">
+            <span class="label">Meet Claudio</span>
+            <h2>A curious mind. A kind heart. A global citizen.</h2>
+            <p>
+              Claudio is not a superhero and he never lectures. He is human: curious, kind,
+              open-minded, optimistic, funny and sometimes clumsy. He watches everyday life,
+              makes mistakes, asks simple but meaningful questions, and learns his lessons
+              from ordinary encounters.
+            </p>
+            <ul class="traits" aria-label="Claudio's personality">
+              <li>Curious</li>
+              <li>Kind</li>
+              <li>Optimistic</li>
+              <li>Imperfect</li>
+              <li>Open-minded</li>
+              <li>Naturally funny</li>
+            </ul>
+          </div>
+
+          <aside class="note-card reveal" aria-label="About Claudio">
+            <h3>About Claudio</h3>
+            <dl>
+              <dt>Age</dt><dd>Timeless (20s–30s)</dd>
+              <dt>Personality</dt><dd>Curious, kind, open-minded, optimistic, funny, sometimes clumsy, always positive</dd>
+              <dt>Passion</dt><dd>People, cultures, stories, good food, nature and meaningful conversations</dd>
+              <dt>Symbol</dt><dd>A globe: our shared home</dd>
+              <dt>Companion</dt><dd>Max, his dog: loyal, fun, no differences, just love</dd>
+              <dt>Mission</dt><dd>To connect, understand and inspire a more peaceful and happier world</dd>
+            </dl>
+            <p class="handquote">“Same sky. Brighter people.”</p>
+          </aside>
         </div>
-        <div class="reveal">
-          <span class="eyebrow">Meet Claudio</span>
-          <h2>Not a superhero. Just human.</h2>
-          <p>
-            Claudio is curious, kind and optimistic — and gloriously imperfect. He doesn’t
-            lecture anyone. He watches everyday life, makes mistakes, asks simple but
-            meaningful questions, and discovers lessons through ordinary encounters.
-          </p>
-          <p>
-            You’ll know him anywhere: spiky black hair, an expressive face, a casual T-shirt,
-            jeans, sneakers — and, more often than not, a backpack on his shoulders.
-          </p>
-          <ul class="traits" aria-label="Claudio's personality">
-            <li>Curious</li>
-            <li>Kind</li>
-            <li>Optimistic</li>
-            <li>Imperfect</li>
-            <li>Open-minded</li>
-            <li>Naturally funny</li>
-          </ul>
+
+        <div class="sheets">
+          <figure class="sheet reveal">
+            <img src="assets/img/claudio-poses.webp" width="645" height="302" loading="lazy"
+                 alt="Claudio character poses: walking, thinking, exploring with a map, crouching with his dog, and relaxing on a chair.">
+            <figcaption>Character poses</figcaption>
+          </figure>
+          <figure class="sheet reveal">
+            <img src="assets/img/claudio-expressions.webp" width="673" height="180" loading="lazy"
+                 alt="Claudio's expressions: happy, curious, surprised, funny, thoughtful, confident and grateful.">
+            <figcaption>Expressions</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -183,19 +149,19 @@
     <!-- Meet Max -->
     <section class="section section-alt" id="max">
       <div class="container split split-reverse">
-        <div class="panel panel-art panel-max reveal" aria-hidden="true">
-          <svg viewBox="0 0 140 110"><use href="#max" filter="url(#wobble)"/></svg>
-          <span class="speech speech-silent">…</span>
-        </div>
+        <figure class="panel reveal">
+          <img src="assets/img/max-the-look.webp" width="253" height="242" loading="lazy"
+               alt="Storyboard frame: Max stops and stares at Claudio. Claudio: Don't look at me like that.">
+        </figure>
         <div class="reveal">
-          <span class="eyebrow">Meet Max</span>
+          <span class="label">Meet Max</span>
           <h2>Small dog. Big silences.</h2>
           <p>
-            Max is Claudio’s small dog and constant travel companion. He never says a word —
-            he doesn’t need to. Through a tilted head, a stubborn sit or a perfectly timed
-            nudge, Max brings the humor, the emotion, and sometimes the wisdom Claudio missed.
+            Max is Claudio’s dog and constant travel companion. He never says a word,
+            and he doesn’t need to. A tilted head, a stubborn sit or a long, pointed stare
+            brings the humor and the emotion, and sometimes the wisdom Claudio missed.
           </p>
-          <p class="handnote">Sometimes the quietest one in the room understands the most.</p>
+          <p class="handnote">Max is the quiet mirror of the series. Claudio usually loses the argument.</p>
         </div>
       </div>
     </section>
@@ -204,43 +170,73 @@
     <section class="section" id="journey">
       <div class="container">
         <header class="section-head reveal">
-          <span class="eyebrow">The journey</span>
-          <h2>Different places. The same heart.</h2>
+          <span class="label">The journey</span>
+          <h2>Different places. Same people.</h2>
           <p>
-            Claudio travels through different places and cultures, meeting people of every
-            background, ethnicity, religion, belief and generation. Along the way, one thing
-            keeps showing up: underneath our differences, we share the same…
+            Claudio travels through different countries and cultures, meeting people of every
+            background, ethnicity, religion, belief and generation. Underneath our differences,
+            we share the same hopes, fears, struggles, dreams and need for connection.
           </p>
         </header>
-        <ul class="shared reveal">
-          <li>hopes</li>
-          <li>fears</li>
-          <li>struggles</li>
-          <li>dreams</li>
-          <li>need for connection</li>
-        </ul>
+
+        <div class="scenes">
+          <figure class="scene reveal"><img src="assets/img/scene-new-places.webp" width="314" height="204" loading="lazy" alt="Claudio and Max sit on a hill watching a city at sunset. New places, new friends, same dreams."></figure>
+          <figure class="scene reveal"><img src="assets/img/scene-cultures.webp" width="316" height="204" loading="lazy" alt="Claudio laughs on the steps with a new friend while Max listens. Different cultures, richer conversations."></figure>
+          <figure class="scene reveal"><img src="assets/img/scene-good-food.webp" width="296" height="232" loading="lazy" alt="Claudio shares a meal with an older woman in her kitchen. Good food brings people together."></figure>
+          <figure class="scene reveal"><img src="assets/img/scene-happiness.webp" width="304" height="232" loading="lazy" alt="Claudio relaxes under a tree with Max. Happiness is simpler than we think."></figure>
+        </div>
       </div>
     </section>
 
-    <!-- Themes -->
-    <section class="section section-alt" id="themes">
+    <!-- Episode 1 -->
+    <section class="section section-alt" id="episode-1">
       <div class="container">
         <header class="section-head reveal">
-          <span class="eyebrow">Themes</span>
-          <h2>What the stories are about</h2>
-          <p>Emotional, dramatic or touching — always with intelligent, natural humor.</p>
+          <span class="label">Episode 1</span>
+          <h2>A Small Act, A Big Impact</h2>
+          <ul class="meta">
+            <li>Earth · Nature · Personal responsibility</li>
+            <li>4–5 minutes</li>
+            <li>Cinematic · Emotional · Humorous · Hopeful</li>
+          </ul>
         </header>
 
-        <div class="themes-grid">
-          <article class="theme reveal"><h3>Love</h3><p>The kind we give, lose, find again and learn from.</p></article>
-          <article class="theme reveal"><h3>Friendship</h3><p>Strangers who become something more in a single afternoon.</p></article>
-          <article class="theme reveal"><h3>Family</h3><p>What we inherit, what we pass on, and what we choose to change.</p></article>
-          <article class="theme reveal"><h3>Kindness</h3><p>Small gestures that quietly change someone’s day.</p></article>
-          <article class="theme reveal"><h3>Peace</h3><p>Between people, between neighbors, and within ourselves.</p></article>
-          <article class="theme reveal"><h3>Happiness</h3><p>Often found where nobody thought to look.</p></article>
-          <article class="theme reveal"><h3>Tolerance</h3><p>Seeing the person before the label.</p></article>
-          <article class="theme reveal"><h3>Nature</h3><p>Our responsibility to the planet we borrow from our children.</p></article>
-          <article class="theme reveal"><h3>Human behavior</h3><p>Why we do the strange, funny, beautiful things we do.</p></article>
+        <div class="split episode">
+          <div class="reveal">
+            <p>
+              A beautiful morning in a coastal park. A plastic bottle rolls across the path.
+              Claudio sees it, and walks right past. <em>Someone will pick it up.</em>
+              Max stops, sits down next to the bottle and stares at him.
+            </p>
+            <div class="dialogue">
+              <p><b>Claudio:</b> “Don’t look at me like that.”</p>
+              <p><b>Claudio:</b> “Fine. You win.”</p>
+            </div>
+            <p>
+              One bottle becomes two, then ten. A little girl is watching. Her father is
+              watching her. A cyclist stops, a café owner joins in, and two kids turn it into
+              a competition that Claudio is badly losing. Then, at the shoreline, the mood changes…
+            </p>
+            <blockquote class="core-message">
+              “The Earth doesn’t need one perfect person. It needs billions of people who care a little more.”
+            </blockquote>
+          </div>
+
+          <div class="frames reveal">
+            <figure><img src="assets/img/ep1-opening.webp" width="266" height="242" loading="lazy" alt="Storyboard frame 1: sunrise over a coastal city. A new day, a brighter chance."></figure>
+            <figure><img src="assets/img/ep1-first-act.webp" width="273" height="242" loading="lazy" alt="Storyboard frame 5: Claudio picks up the bottle while Max looks pleased. Claudio: Fine. You win."></figure>
+            <figure><img src="assets/img/ep1-fun-moment.webp" width="261" height="250" loading="lazy" alt="Storyboard frame 10: children and Claudio compete collecting litter. Child: You're losing!"></figure>
+            <figure><img src="assets/img/ep1-final.webp" width="305" height="256" loading="lazy" alt="Storyboard frame 18: Claudio and Max at sunset. Never underestimate a small act. The world is made of them."></figure>
+          </div>
+        </div>
+
+        <div class="storyboard reveal">
+          <a class="btn btn-ghost" href="assets/img/episode1-storyboard.webp" target="_blank" rel="noopener">View the full storyboard ↗</a>
+        </div>
+
+        <div class="big-quote reveal">
+          <p>“Never underestimate a small act.<br>The world is made of them.”</p>
+          <p class="big-quote-ask">What will your small act be today?</p>
         </div>
       </div>
     </section>
@@ -249,73 +245,107 @@
     <section class="section" id="episodes">
       <div class="container">
         <header class="section-head reveal">
-          <span class="eyebrow">Episodes</span>
-          <h2>Short stories. Long thoughts.</h2>
-          <p>
-            Each episode is a short animated story of up to about five minutes — made for
-            YouTube, Instagram, TikTok and Facebook.
-          </p>
+          <span class="label">Episodes</span>
+          <h2>Small stories. Big impact.</h2>
+          <p>Every episode starts with an ordinary situation and ends with a simple, memorable realization, never a lecture.</p>
         </header>
 
-        <ol class="strip">
-          <li class="frame reveal">
-            <span class="frame-num">1</span>
-            <h3>An ordinary moment</h3>
-            <p>A bus stop. A market. A rainy afternoon. Every story starts somewhere familiar.</p>
-          </li>
-          <li class="frame reveal">
-            <span class="frame-num">2</span>
-            <h3>A human story</h3>
-            <p>An encounter grows into something relatable — told through silence, gestures and small details.</p>
-          </li>
-          <li class="frame reveal">
-            <span class="frame-num">3</span>
-            <h3>A quiet realization</h3>
-            <p>No lecture, no moral. Just a simple truth that stays with you after the screen goes dark.</p>
-          </li>
+        <ol class="beats reveal">
+          <li><span>1</span>A real-life situation</li>
+          <li><span>2</span>A cultural or human encounter</li>
+          <li><span>3</span>A challenge or misunderstanding</li>
+          <li><span>4</span>A meaningful lesson</li>
+          <li><span>5</span>A positive, memorable ending</li>
         </ol>
 
-        <div class="coming-soon reveal">
-          <p class="handnote">The first episodes are on their way.</p>
-          <a class="btn btn-primary" href="#follow">Get notified</a>
-        </div>
+        <h3 class="subhead reveal">Planned episodes</h3>
+        <ol class="episode-list">
+          <li class="ep reveal ep-ready"><span class="ep-num">Ep. 1</span><h4>A Small Act, A Big Impact</h4><span class="ep-status">Script &amp; storyboard ready</span></li>
+          <li class="ep reveal"><span class="ep-num">Ep. 2</span><h4>Different Roads, Same Dreams</h4><span class="ep-status">Coming soon</span></li>
+          <li class="ep reveal"><span class="ep-num">Ep. 3</span><h4>Love Has No Borders</h4><span class="ep-status">Coming soon</span></li>
+          <li class="ep reveal"><span class="ep-num">Ep. 4</span><h4>People Over Prejudices</h4><span class="ep-status">Coming soon</span></li>
+          <li class="ep reveal"><span class="ep-num">Ep. 5</span><h4>A Greener Tomorrow</h4><span class="ep-status">Coming soon</span></li>
+          <li class="ep reveal"><span class="ep-num">Ep. 6</span><h4>A Happier You</h4><span class="ep-status">Coming soon</span></li>
+          <li class="ep reveal"><span class="ep-num">Ep. 7</span><h4>We Are All Humans</h4><span class="ep-status">Coming soon</span></li>
+          <li class="ep reveal"><span class="ep-num">Ep. 8</span><h4>A Brighter Tomorrow</h4><span class="ep-status">Coming soon</span></li>
+        </ol>
+
+        <ul class="format reveal" aria-label="Format and distribution">
+          <li><strong>≤ 5 min</strong><span>per episode</span></li>
+          <li><strong>Weekly</strong><span>one new episode a week</span></li>
+          <li><strong>4 platforms</strong><span>YouTube, Instagram, TikTok, Facebook</span></li>
+          <li><strong>Global</strong><span>universal themes, multi-language potential</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Themes -->
+    <section class="section section-alt" id="themes">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="label">Themes</span>
+          <h2>What the stories are about</h2>
+          <p>Emotional, dramatic or touching, and always with intelligent, natural humor.</p>
+        </header>
+        <ul class="themes reveal">
+          <li>Human values</li>
+          <li>Friendship across cultures</li>
+          <li>Love &amp; relationships</li>
+          <li>Family &amp; generational wisdom</li>
+          <li>Kindness</li>
+          <li>Peace</li>
+          <li>Happiness</li>
+          <li>Overcoming prejudice</li>
+          <li>Unity in diversity</li>
+          <li>Environmental responsibility</li>
+          <li>Human behavior</li>
+          <li>A better tomorrow</li>
+        </ul>
       </div>
     </section>
 
     <!-- Visual style -->
-    <section class="section section-alt" id="style">
+    <section class="section" id="style">
       <div class="container split">
         <div class="reveal">
-          <span class="eyebrow">Visual style</span>
+          <span class="label">Visual style</span>
           <h2>Simple lines. Timeless feeling.</h2>
           <p>
-            A simplified 2D hand-drawn world, built to be recognized at a glance and
+            A simplified 2D hand-drawn world that can be recognized at a glance and
             understood in any language, by any generation.
           </p>
           <ul class="checklist">
-            <li>Clean, expressive black lines and minimal detail</li>
+            <li>Clean, expressive black ink lines and minimal detail</li>
             <li>Faces and body language you can read instantly</li>
-            <li>Cinematic composition — room for silence</li>
-            <li>Warm, natural colors when color is used</li>
+            <li>Cinematic composition with room for silence</li>
+            <li>Warm, natural colors: sunsets, denim, a red pair of sneakers</li>
             <li>A timeless look that works across cultures</li>
           </ul>
         </div>
         <div class="palette reveal" aria-label="Series color palette">
           <div class="swatch" style="--c: var(--ink)"><span>Ink</span></div>
-          <div class="swatch" style="--c: var(--terracotta)"><span>Terracotta</span></div>
-          <div class="swatch" style="--c: var(--sun)"><span>Sunlight</span></div>
-          <div class="swatch" style="--c: var(--sage)"><span>Sage</span></div>
+          <div class="swatch" style="--c: var(--red)"><span>Sneaker red</span></div>
+          <div class="swatch" style="--c: var(--sunset)"><span>Sunset</span></div>
           <div class="swatch" style="--c: var(--denim)"><span>Denim</span></div>
-          <div class="swatch swatch-paper" style="--c: #fbf6ec"><span>Paper</span></div>
+          <div class="swatch" style="--c: var(--leaf)"><span>Leaf</span></div>
+          <div class="swatch" style="--c: #f5f2ee"><span>Paper</span></div>
         </div>
+      </div>
+    </section>
+
+    <!-- Closing quote -->
+    <section class="closing">
+      <div class="container reveal">
+        <p>“A kinder world is a more exciting place to live.”</p>
+        <span>— Claudio</span>
       </div>
     </section>
 
     <!-- Follow -->
     <section class="cta" id="follow">
       <div class="container cta-inner reveal">
-        <h2>Walk along with Claudio &amp; Max</h2>
-        <p>Follow the series and be the first to see new episodes.</p>
+        <h2>Follow Claudio for a brighter tomorrow</h2>
+        <p>Be the first to see new episodes, behind-the-scenes sketches and storyboards.</p>
         <div class="socials-lg">
           <a class="social-btn" href="#" data-platform="youtube">YouTube</a>
           <a class="social-btn" href="#" data-platform="instagram">Instagram</a>
@@ -325,7 +355,7 @@
         <form class="newsletter" id="newsletter-form">
           <label class="sr-only" for="nl-email">Email address</label>
           <input id="nl-email" type="email" placeholder="you@example.com" required>
-          <button class="btn btn-light" type="submit">Notify me</button>
+          <button class="btn btn-dark" type="submit">Notify me</button>
         </form>
         <p class="newsletter-status" role="status" aria-live="polite"></p>
       </div>
@@ -335,14 +365,14 @@
     <section class="section" id="contact">
       <div class="container contact-grid">
         <div class="reveal">
-          <span class="eyebrow">Contact</span>
+          <span class="label">Contact</span>
           <h2>Say hello</h2>
           <p>
-            For collaborations, broadcasting, licensing, press — or just to share a story
-            Claudio should hear — send a message.
+            For collaborations, broadcasting, licensing and press, or just to share a story
+            Claudio should hear, send a message.
           </p>
           <ul class="contact-list">
-            <li>✉️ <a href="mailto:hello@claudio.example">hello@claudio.example</a></li>
+            <li>✉️ <a class="contact-email" href="mailto:hello@claudio.example">hello@claudio.example</a></li>
           </ul>
         </div>
 
@@ -372,9 +402,9 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <a class="brand" href="#top">
-          <img src="assets/logo.svg" alt="" width="32" height="32">
-          <span>CLAUDIO</span>
+        <a class="brand" href="#top" aria-label="Claudio home">
+          <img class="wordmark wordmark-ink" src="assets/wordmark.png" alt="Claudio" width="252" height="162">
+          <img class="wordmark wordmark-light" src="assets/wordmark-light.png" alt="" width="252" height="162">
         </a>
         <p class="handnote footer-tagline">Different People. One Story. A Kinder World.</p>
       </div>
@@ -382,7 +412,7 @@
         <h4>The series</h4>
         <a href="#claudio">Claudio</a>
         <a href="#max">Max</a>
-        <a href="#themes">Themes</a>
+        <a href="#episode-1">Episode 1</a>
         <a href="#episodes">Episodes</a>
       </nav>
       <nav aria-label="Follow">
@@ -394,8 +424,8 @@
       </nav>
     </div>
     <div class="container footer-bottom">
-      <p>© <span id="year"></span> CLAUDIO. All rights reserved.</p>
-      <a href="#top" class="back-to-top">Back to top ↑</a>
+      <p>© <span id="year"></span> Claudio. All rights reserved.</p>
+      <p class="handnote">Same sky. Brighter people.</p>
     </div>
   </footer>
 

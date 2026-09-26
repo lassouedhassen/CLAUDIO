@@ -1,4 +1,4 @@
-/* CLAUDIO — official website interactions */
+/* Claudio — official website interactions */
 (function () {
   'use strict';
 
@@ -41,6 +41,12 @@
       a.setAttribute('aria-disabled', 'true');
       a.title = 'Coming soon';
     }
+  });
+
+  /* Contact email ------------------------------------------------------ */
+  $$('.contact-email').forEach(function (a) {
+    a.href = 'mailto:' + CONTACT_EMAIL;
+    a.textContent = CONTACT_EMAIL;
   });
 
   /* Header shadow on scroll --------------------------------------------- */
@@ -162,7 +168,7 @@
         status.textContent = 'Please enter a valid email address.';
         return;
       }
-      status.textContent = "Thanks! We'll let you know when Claudio and Max are back on the road.";
+      status.textContent = "Thanks! You'll hear from Claudio when a new episode is out.";
       nl.reset();
     });
   }
